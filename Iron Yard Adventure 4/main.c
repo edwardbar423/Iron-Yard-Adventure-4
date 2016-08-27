@@ -146,6 +146,7 @@ int main(int argc, const char * argv[]) {
                     break;
                     
                 default:
+                    printf("Start Over.\n\n\n");
                     break;
             }
             
@@ -154,12 +155,65 @@ int main(int argc, const char * argv[]) {
             
         case 4:
             printf("Never having had expored the Front Kitchen, you find a unique amount of supplies!\n");
+            printf("You found Dominique's leftovers in the refrigerator.\n");
+            printf("Where to now?\n");
+            printf("1: Head to the Office\n");
+            printf("2: Classroom, supplies maybe?\n");
+            printf("3: The Bathroom...\n");
+            printf("5: Staircase, I'll just leave!\n");
+            scanf("%d", &travel);
+            
+            switch (travel) {
+                case 1:
+                case 2:
+                case 3:
+                case 5:
+                    printf("As you leave the Front Kitchen you look toward the staircase. It's dark, looming with a mist.\n");
+                    printf("A figure, hunched with wirey hair, black and wrinkled creeps up and makes a gesture at you with a crippled arm.\n");
+                    printf("You panic, as the creatre bellows your name. The low voice of a woman.\n");
+                    printf("What do you do?\n");
+                    printf("0: Make a stand.\n");
+                    printf("1: RUN. \n");
+                    scanf("%d", &travel);
+                    
+                    switch (travel) {
+                        case 0:
+                            printf("You throw Dominique's leftovers at the creature! It leaves a mushy pile on top of its hair. Instead of being mad it scoops the food off its head and munches on the leftovers as the mist fades and the room returns to normal.\n");
+                            printf("What a strange day.\n");
+                            
+                            return 0;
+                            
+                        case 1:
+                            printf("Throwing everything you have in the air you make a run for it!\n");
+                            printf("You toss Dominique's leftovers at the creature! It leaves a mushy pile on top of its hair. Instead of being mad it scoops the food off its head and munches on the leftovers as the mist fades and the room returns to normal.\n");
+                            printf("'What a strange day.' You think as you watch the creature dissapear.\n");
+                            
+                            break;
+                            
+                        default:
+                            printf("Start Over.\n\n\n");
+                            return 0;
+                    }
+                    
+                    break;
+                    
+                default:
+                    printf("Start Over.\n\n\n");
+                    return 0;
+            }
+            
             break;
             
             
         case 5:
-            printf("I'm a bit creeped out, time to make an exit for it.\n");
-            break;
+            printf("I'm a bit creeped out, time to make an exit.\n");
+            printf("You smell something sweet an alluring as you come over to the stairs.\n");
+            printf("What could that be? You wonder as you become relaxed and docile.\n");
+            printf("As you approach you are completely relaxed.\n");
+            printf("A figure, hunched with wirey hair, black and wrinkled creeps up and makes a gesture at you with a crippled arm.\n");
+            printf("The creatre bellows your name. The low voice of a woman.\n");
+            printf("You follow the creature into a sickly sweet mist down the stairs and dissapear.\n");
+            return 0;
             
             
         default:
