@@ -32,26 +32,8 @@ int main(int argc, const char * argv[]) {
     scanf("%d", &travel);
     
     switch (travel) {
-        case 0:
-            printf("Waiting... and the air gets more chilly and cold. 'What's going on?!'.\n");
-            printf("What do you want to do?\n");
-            printf("0: Keep waiting\n");
-            printf("1: Get some coffee\n");
-            scanf("%d", &travel);
-            
-            switch (travel) {
-                case 0:
-                    printf("Somewhere along the way, you lose focus and sleep.\n");
-                    printf("You slip away somewhere, but you'll never know where.\n");
-                    return 0;
-                
-                case 1:
-                    printf("Sometimes anyone could use a pick me up. Thankfully the coffee is still warm!\n");
-                    printf("But... now you have to use the bathroom..\n");
-                    printf("You head over to the bathroom\n");
-                default:
-                    printf("Such a strange night.\n");
-                    break;
+        case 0: {
+            sunroom();
             }
             
         case 1:
@@ -234,7 +216,25 @@ int main(int argc, const char * argv[]) {
 
 void sunroom(void) {
     
+    printf("Waiting... and the air gets more chilly and cold. 'What's going on?!'.\n");
+    printf("What do you want to do?\n");
+    printf("0: Keep waiting\n");
+    printf("1: Get some coffee\n");
+    scanf("%d", &travel);
     
+    switch (travel) {
+        case 0:
+            printf("Somewhere along the way, you lose focus and sleep.\n");
+            printf("You slip away somewhere, but you'll never know where.\n");
+            break;
+            
+        case 1:
+            printf("Sometimes anyone could use a pick me up. Thankfully the coffee is still warm!\n");
+            printf("But... now you have to use the bathroom..\n");
+            printf("You head over to the bathroom\n");
+        default:
+            printf("Such a strange night.\n");
+            break;
     
+    }
 }
-
