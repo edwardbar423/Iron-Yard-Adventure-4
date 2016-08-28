@@ -175,7 +175,7 @@ void office(void) {
         case 2:
         case 4:
         case 5:
-            printf("As you leave the bathroom you look toward the staircase. It's dark, looming with a mist.\n");
+            printf("As you leave you look toward the staircase. It's dark, looming with a mist.\n");
             printf("A figure, hunched with wirey hair, black and wrinkled creeps up and makes a gesture at you with a crippled arm.\n");
             printf("You panic, as the creatre bellows your name. The low voice of a woman.\n");
             printf("What do you do?\n");
