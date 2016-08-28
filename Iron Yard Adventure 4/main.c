@@ -10,6 +10,13 @@
 
 int travel = 1;
 
+void sunroom(void);
+void bathroom(void);
+void classroom(void);
+void office(void);
+void kitchen(void);
+void staircase(void);
+
 int main(int argc, const char * argv[]) {
     
     printf("It has been a long night. What should I expect?\n");
@@ -224,3 +231,10 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
+
+void sunroom(void) {
+    
+    
+    
+}
+
