@@ -143,6 +143,7 @@ void bathroom(void) {
     switch (travel) {
         case 0:
             printf("You pull the string, the bricks pull back and a massive dark hole comes from out of no where. You try to move away but it pulls you in and there is no escape. You were sucked into the void.\n\n");
+            endGame();
             break;
             
         case 1:
@@ -172,14 +173,17 @@ void bathroom(void) {
                     printf("0: You do nothing in your panic. \n");
                     printf("0: You do nothing in your panic. \n");
                     printf("0: You do nothing in your panic. \n");
+                    endGame();
                     break;
                     
                 default: printf("0: You do nothing in your panic. \n\n\n");
+                    endGame();
                     break;
             }
             
         default:
             printf("Start over.\n\n\n");
+            endGame();
             break;
     }
 }
@@ -222,20 +226,24 @@ void office(void) {
                     printf("Taking a jab at one of the crooked arms.\n");
                     printf("A howl is let out and the mist receedes, taking the darkness and cold with it.\n");
                     printf("The lights come back on and you wonder if it was a dream.\nThen you see Isabel's pen on the floor.\n");
+                    endGame();
                     break;
                     
                 case 1:
                     printf("You panic, run, but you seem to move slowly... and the mist consumes you as you run away.\n");
+                    endGame();
                     break;
                     
                 default:
                     printf("Start over.\n\n\n");
+                    endGame();
                     break;
             }
             break;
             
         default:
             printf("Start Over.\n\n\n");
+            endGame();
             break;
     }
     
@@ -269,18 +277,19 @@ void kitchen(void) {
                 case 0:
                     printf("You throw Dominique's leftovers at the creature! It leaves a mushy pile on top of its hair. Instead of being mad it scoops the food off its head and munches on the leftovers as the mist fades and the room returns to normal.\n");
                     printf("What a strange day.\n");
-                    
+                    endGame();
                     break;
                     
                 case 1:
                     printf("Throwing everything you have in the air you make a run for it!\n");
                     printf("You toss Dominique's leftovers at the creature! It leaves a mushy pile on top of its hair. Instead of being mad it scoops the food off its head and munches on the leftovers as the mist fades and the room returns to normal.\n");
                     printf("'What a strange day.' You think as you watch the creature dissapear.\n");
-                    
+                    endGame();
                     break;
                     
                 default:
                     printf("Start Over.\n\n\n");
+                    endGame();
                     break;
             }
             
@@ -288,6 +297,7 @@ void kitchen(void) {
             
         default:
             printf("Start Over.\n\n\n");
+            endGame();
             break;
     }
     
@@ -302,7 +312,7 @@ void staircase(void) {
     printf("A figure, hunched with wirey hair, black and wrinkled creeps up and makes a gesture at you with a crippled arm.\n");
     printf("The creatre bellows your name. The low voice of a woman.\n");
     printf("You follow the creature into a sickly sweet mist down the stairs and dissapear.\n");
-    
+    endGame();
 }
 
 
