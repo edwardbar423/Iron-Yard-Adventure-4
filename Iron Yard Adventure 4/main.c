@@ -7,9 +7,17 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+
 
 int travel = 1;
+int playAgain = -1;
+int userInput = -1;
 
+void startGame();
+void endGame();
+int shouldRestartGame();
 void sunroom(void);
 void bathroom(void);
 void classroom(void);
@@ -18,6 +26,32 @@ void kitchen(void);
 void staircase(void);
 
 int main(int argc, const char * argv[]) {
+    startGame();
+    return 0;
+}
+
+void endGame() {
+    if (shouldRestartGame() == 0) {
+        startGame();
+    }
+}
+
+int shouldRestartGame() {
+
+    int playAgain = -1;
+    
+    while (playAgain != 0 && playAgain != 1) {
+        
+        printf("Do you want to play again?\n");
+        printf("0: YES\n1: NO\n");
+        scanf("%d", &userInput);
+        playAgain = userInput;
+    } // end while loop
+    
+    return playAgain;
+} // end shouldRestartGame
+
+void startGame() {
     
     printf("It has been a long night. What should I expect?\n");
     printf("The lights flicker and go out.\n");
@@ -31,41 +65,37 @@ int main(int argc, const char * argv[]) {
     printf("5: Staircase, I'll just leave!\n");
     scanf("%d", &travel);
     
+    
     switch (travel) {
         case 0: {
             sunroom();
-            return 0;
+            break;
         }
             
         case 1: {
             bathroom();
+            break;
         }
-            return 0;
             
         case 2: {
             classroom();
+            break;
         }
-            return 0;
-            
         case 3: {
             office();
+            break;
         }
-            return 0;
-            
             
         case 4: {
             kitchen();
+            break;
         }
-            return 0;
-            
             
         case 5: {
             staircase();
+            break;
         }
-            return 0;
     }
-    
-    return 0;
 }
 
 //--------------------------------------------------------------------------------------
@@ -82,12 +112,15 @@ void sunroom(void) {
         case 0:
             printf("Somewhere along the way, you lose focus and sleep.\n");
             printf("You slip away somewhere, but you'll never know where.\n");
-            return;
+            endGame();
+            break;
             
         case 1:
             printf("Sometimes anyone could use a pick me up. Thankfully the coffee is still warm!\n");
             printf("But... now you have to use the bathroom..\n");
             printf("You head over to the bathroom\n");
+            break;
+            
         default:
             printf("Such a strange night.\n");
             bathroom();
